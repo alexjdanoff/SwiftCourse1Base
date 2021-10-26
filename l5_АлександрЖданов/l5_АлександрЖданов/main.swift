@@ -94,22 +94,22 @@ class MainCar: Car {
     }
 }
 
-class TrunkCar: MainCar, CustomStringConvertible {
+final class TrunkCar: MainCar, CustomStringConvertible {
     var luggage: Trailer = .isPrezent
     var description: String {
         return "Автомобиль марки \(mark) \(year) года выпуска. Прицеп присутсвует."
     }
 }
 
-class SportCar: MainCar, CustomStringConvertible {
+final class SportCar: MainCar, CustomStringConvertible {
     var fastMode: SportMode = .On
     var description: String {
         return "Автомобиль марки \(mark) \(year) года выпуска. Спорт режим включен."
     }
 }
 
-var volvo = TrunkCar(mark: "Volvo", year: 2011, trunkVolume: .volumeFive, windowPosition: .close, engineCondition: .stop)
-var mazerati = SportCar(mark: "Mazerati", year: 2020, trunkVolume: .volumeOne, windowPosition: .open, engineCondition: .start)
+private var volvo = TrunkCar(mark: "Volvo", year: 2011, trunkVolume: .volumeFive, windowPosition: .close, engineCondition: .stop)
+private var mazerati = SportCar(mark: "Mazerati", year: 2020, trunkVolume: .volumeOne, windowPosition: .open, engineCondition: .start)
 
 print(volvo.description)
 volvo.trunkVolume = .volumeFive
