@@ -3,7 +3,6 @@
 //  l2_АлександрЖданов
 //
 //  Created by Alexandru Jdanov on 15.10.2021.
-//
 
 import Foundation
 
